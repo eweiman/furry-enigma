@@ -3,7 +3,7 @@ Hulu video ad blocking on FireTV devices via DNSmasq, lighttpd, minidnla, ddwrt
 
 
 This is based on work originally using pixlserv to block ads using 1x1px GIFs and later incorporated some ideas from pi-hole. I've written this to run directly on your router to eliminate a need for extra devices on the network, and eliminate extra network hops 
-which add latency and complexity. However it should be easily ported over to any *nix based system on your network.  This inlcudes video ad blocking for Hulu on FireTV devices, it *may* work on other devices however it is not guaranteed. The way that Hulu runs 
+which add latency and complexity. However it should be easily ported over to any \*nix based system on your network.  This inlcudes video ad blocking for Hulu on FireTV devices, it *may* work on other devices however it is not guaranteed. The way that Hulu runs 
 things makes it difficult to have a one size fits all solution.  The FireTV will nearly instantly skip all ads in the broadcast, except for the network splash screen at start of show (think NBC splash and the time that the show airs). The times where you are asked to pick your ad experience will not be skipped entirely due to the timer, simply pick any experience and you will proceed to skip the ad. 
 
 To block the video ad you need to replace the video that the Hulu app is requesting with a video of your own which makes the app believe that it displayed the proper advertisment instead of waiting 30 seconds to proceed. 
