@@ -10,18 +10,12 @@ To block the video ad you need to replace the video that the Hulu app is request
 
 
 This makes the following assumptions: 
-
-That you are running a class A network with a class C subnet mask (not using 192.168.x.x).
-
-You _can_ change the IPs associated but it will take some time for the average person. 
-
-You have the "/jffs" partition on dd-wrt available. 
-
-You have minidnla running via ddwrt (under Services - NAS tab) enabled with the /jffs partition in the shared path where the video of your choice is located (smaller the better).
+- That you are running a class A network with a class C subnet mask (not using 192.168.x.x).
+- You _can_ change the IPs associated but it will take some time for the average person. 
+- You have the "/jffs" partition on dd-wrt available. 
+- You have minidnla running via ddwrt (under Services - NAS tab) enabled with the /jffs partition in the shared path where the video of your choice is located (smaller the better).
 
 **You will need to use VLC to determine the video path for your replacement advertisement video and update the lighttpd configuration file for Hulu.** This should only need to be done once unless you change the video / create new database.
-
-
 
 That your router is at the following IP:
 
