@@ -19,7 +19,8 @@ You have the "/jffs" partition on dd-wrt available.
 
 You have minidnla running via ddwrt (under Services - NAS tab) enabled with the /jffs partition in the shared path where the video of your choice is located (smaller the better).
 
-You will need to use VLC to determine the video path for your replacement advertisement video and update the lighttpd configuration file for Hulu. This should only need to be done once unless you change the video / create new database. 
+**You will need to use VLC to determine the video path for your replacement advertisement video and update the lighttpd configuration file for Hulu.** This should only need to be done once unless you change the video / create new database.
+
 
 
 That your router is at the following IP:
@@ -30,7 +31,7 @@ That your router is at the following IP:
 - That you are running a version of dd-wrt that inludes minidlna, dnsmasq, lighttpd.
 
 Populate the 'startup commands' section of ddwrt with the following (without this you wont be serving adblocking webpages):
-
+```
 sleep 2
 ifconfig br0:1 10.10.10.254 netmask 255.255.255.0
 sleep 2
@@ -38,7 +39,7 @@ ifconfig br0:2 10.10.10.253 netmask 255.255.255.0
 sleep 1
 /jffs/adblock/lighttpd -f /jffs/adblock/lighttpd.conf
 /jffs/hulu/lighttpd -f /jffs/hulu/lighttpd.conf
-
+```
 
 
 The startup commands listed will add extra IP addresses to your router that will serve as web pages that the ad requests will be re-directed to. 
